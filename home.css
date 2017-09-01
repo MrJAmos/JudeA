@@ -1,0 +1,64 @@
+body {
+    margin: 0px;
+    background-color: blue;
+}
+nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-color: #cccccc;    
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    border-style: solid;
+}   
+
+.navIcons {
+    float: right;
+}
+
+.navMenu {
+    float: left;
+}
+
+li {
+    float: left;
+}   
+
+li a {
+    overflow: hidden;
+    display: block;
+    padding: 14px 16px; 
+    color: white; 
+    text-decoration: none;    
+}
+
+li a:hover {
+    background-color: black;
+}
+
+main {
+    position: fixed;
+    top: 120px;
+    width: 100%;
+    text-align: center;
+    z-index: -2;
+}
+
+#selfie {
+  max-width: 15%;
+}
+
+footer {
+    overflow: auto;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;  
+    padding: 30px 16px; 
+    text-align: center; 
+    color: white;
+    background-color: black;
+    z-index: -1;
+}
