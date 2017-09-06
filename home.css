@@ -1,64 +1,144 @@
-body {
-    margin: 0px;
-    background-color: blue;
-}
-nav {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    background-color: #cccccc;    
-}
-ul {
+* {
     margin: 0px;
     padding: 0px;
-    list-style-type: none;
-    border-style: solid;
-}   
-
-.navIcons {
-    float: right;
+    /*border-style:dotted;*/
+}
+body {
+    background-color: blue;
 }
 
-.navMenu {
-    float: left;
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "main main main main"
+    "footer footer footer footer";
 }
 
-li {
-    float: left;
-}   
-
-li a {
+nav {
     overflow: hidden;
-    display: block;
-    padding: 14px 16px; 
-    color: white; 
-    text-decoration: none;    
+    max-height: 45px;
+    grid-area: nav;
+    background-color: #C6C6C6; 
+    border-style: solid;
 }
 
-li a:hover {
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    overflow: hidden; 
+}
+
+nav ul .navMenu {
+    padding: 15px 0px 15px 0px;
+}
+
+nav ul .navMenu a {
+    padding: 15px 20px;  
+    text-decoration: none;        
+    color: white;  
+}
+
+nav ul .navMenu a:hover {
     background-color: black;
+}
+
+aside {
+    float: right;
+    margin-right: 15px;
 }
 
 main {
-    position: fixed;
-    top: 120px;
-    width: 100%;
+    grid-area: main;
+    padding: 4.5em;
+    background-color:white;
     text-align: center;
-    z-index: -2;
+    max-height: 65%;
 }
 
 #selfie {
-  max-width: 15%;
+    max-width: 25%;
 }
 
 footer {
+    grid-area: footer;
     overflow: auto;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;  
-    padding: 30px 16px; 
-    text-align: center; 
+    padding: 30px;
+    text-align: center;
     color: white;
-    background-color: black;
-    z-index: -1;
+    background-color:black;
+}
+
+/*-------------------Images----------------*/
+.icon {
+    padding: 10px 0px 0px 10px;
+    max-width: 1.5em;
+}
+
+
+/*.grid {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 100px;
+    grid-template-areas: 
+    "title title title title "
+    "header header header header"
+    "sidebar sidebar content content"
+    "footer footer  footer footer";
+    grid-gap: 10px;
+}
+
+/*.title {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}
+
+.title {
+    grid-area: title;
+}
+.header {
+    grid-area: header;
+}
+.sidebar {
+    grid-area: sidebar;   
+}
+.content {
+    grid-area: content;
+    display: grid;
+}
+.footer {
+    grid-area: footer;
+}
+.grid div:nth-child(even) {
+    background-color: red;
+}
+
+.grid div:nth-child(odd) {
+    background-color: green;
+}*/
+
+@media screen and (min-width:  736px) {
+    .grid {
+        position: fixed;
+        top:30px;
+        display: grid;
+        grid-template-columns: 150px 1fr 1fr 150px;
+        grid-template-areas: 
+        ". nav nav ."
+        ". main main ."
+        ". footer footer .";
+    }
+
+    
+    .banner {
+        background-color:grey;
+        width: 100%;
+        padding: 36px;
+        border-style: solid;
+        z-index: -2;
+    }
 }
