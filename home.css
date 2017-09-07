@@ -4,13 +4,21 @@
     /*border-style:dotted;*/
 }
 body {
-    background-color: blue;
+    background-image: url("https://ttmarketing.ie/wp-content/uploads/2017/06/7649a754c3_102107115_o2.jpg");
+    background-size: 100%;    
 }
 
+.banner {
+  opacity: 0;
+}
 
 .grid {
+    position: fixed;
+    top:0px;
+    bottom: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 45px auto 100px;
     grid-template-areas: 
     "nav nav nav nav"
     "main main main main"
@@ -19,126 +27,141 @@ body {
 
 nav {
     overflow: hidden;
-    max-height: 45px;
+    max-height: 47px;
     grid-area: nav;
+    align-self: center;
     background-color: #C6C6C6; 
-    border-style: solid;
 }
 
-nav ul {
+ul {
     list-style-type: none;
 }
 
-nav li {
+li {
     display: inline-block;
-    overflow: hidden; 
 }
 
-nav ul .navMenu {
+nav ul li{
     padding: 15px 0px 15px 0px;
+    border-right: solid;
+    border-color: white;
 }
 
-nav ul .navMenu a {
+nav ul li a {
     padding: 15px 20px;  
-    text-decoration: none;        
+    text-decoration: none; 
     color: white;  
 }
 
-nav ul .navMenu a:hover {
+nav ul li a:hover:not(.active) {
     background-color: black;
 }
 
-aside {
-    float: right;
-    margin-right: 15px;
+.active{
+    background-color: rgba(0, 0, 187, 0.51);    
 }
+
+nav ul .navMenu_test {
+    float: right;
+    border-left: solid;
+    border-right: none;
+    border-color: white;
+}
+
+
 
 main {
     grid-area: main;
-    padding: 4.5em;
-    background-color:white;
+    background-color: rgba(255,255,255,0.4); 
+    max-height: 100%;
+}
+
+.inner_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "section1 section2"
+    "section1 section3";
+    border-style: dotted;  
+    grid-gap: 10px;  
+}
+
+.section1 {
+    grid-area: section1;
     text-align: center;
-    max-height: 65%;
+    background-color:white;
+    height: inherit;
+}
+
+.section2 {
+    grid-area: section2;
+    background-color: white;
+}
+
+.section3 {
+    grid-area: section3;
+    background-color:white;
 }
 
 #selfie {
-    max-width: 25%;
+    max-width: 20%;
 }
 
 footer {
     grid-area: footer;
     overflow: auto;
-    padding: 30px;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    background-color:black;
 }
 
-/*-------------------Images----------------*/
-.icon {
-    padding: 10px 0px 0px 10px;
-    max-width: 1.5em;
-}
-
-
-/*.grid {
-    display: grid;
-    grid-template-columns: 100px 1fr 1fr 100px;
-    grid-template-areas: 
-    "title title title title "
-    "header header header header"
-    "sidebar sidebar content content"
-    "footer footer  footer footer";
-    grid-gap: 10px;
-}
-
-/*.title {
-    grid-column-end: span 2;
-    grid-row-end: span 2;
-}
-
-.title {
-    grid-area: title;
-}
-.header {
-    grid-area: header;
-}
-.sidebar {
-    grid-area: sidebar;   
-}
-.content {
-    grid-area: content;
-    display: grid;
-}
-.footer {
-    grid-area: footer;
-}
-.grid div:nth-child(even) {
-    background-color: red;
-}
-
-.grid div:nth-child(odd) {
-    background-color: green;
-}*/
+/*------------------Desktop Settings---------*/
 
 @media screen and (min-width:  736px) {
+
+    /*-------------------Images----------------*/
+    .icon {
+    padding: 10px 0px 0px 15px;
+    max-width: 1.5em;
+    }
+
     .grid {
         position: fixed;
-        top:30px;
+        top: 45px;
+        bottom: 0px;
         display: grid;
         grid-template-columns: 150px 1fr 1fr 150px;
+        grid-template-rows: 45px auto 100px;
         grid-template-areas: 
         ". nav nav ."
         ". main main ."
         ". footer footer .";
+        grid-row-gap: 5px;
     }
 
-    
     .banner {
-        background-color:grey;
+
+        position: relative; 
+        overflow: hidden;                
+        top:0px;
         width: 100%;
-        padding: 36px;
-        border-style: solid;
+        height: 80px;
+        max-height: 80px;
+        border-style: solid none none none;
+        border-color: white;
+        opacity: 1;
         z-index: -2;
+        background-color: rgba(255,255,255,0.4); 
+    }
+
+    .banner p {
+        display: inline-block;
+        padding: 10px;
+        font-size: small;
+    }
+
+    aside {
+        float: right;
+        margin-right: 15px;
     }
 }
