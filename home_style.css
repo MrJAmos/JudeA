@@ -5,7 +5,8 @@
 }
 body {
     background-image: url("https://ttmarketing.ie/wp-content/uploads/2017/06/7649a754c3_102107115_o2.jpg");
-    background-size: 100%;    
+    background-size: 100%;  
+    background-repeat: no-repeat;    
 }
 
 .banner {
@@ -25,15 +26,14 @@ body {
     "footer footer footer footer";
 }
 
-nav {
+.mainNavBar {
     overflow: hidden;
     max-height: 47px;
     grid-area: nav;
-    align-self: center;
     background-color: #C6C6C6; 
 }
 
-ul {
+ul{
     list-style-type: none;
 }
 
@@ -41,19 +41,20 @@ li {
     display: inline-block;
 }
 
-nav ul li{
+.mainNavBar ul li {    
     padding: 15px 0px 15px 0px;
-    border-right: solid;
+    margin: -3px;
+    border-style: solid;
     border-color: white;
 }
 
-nav ul li a {
-    padding: 15px 20px;  
+.mainNavBar ul li a {
+    padding: 15px 25px 15px 25px;  
     text-decoration: none; 
     color: white;  
 }
 
-nav ul li a:hover:not(.active) {
+.mainNavBar ul li a:hover:not(.active) {
     background-color: black;
 }
 
@@ -69,42 +70,47 @@ nav ul .navMenu_test {
 }
 
 
-
 main {
     grid-area: main;
-    background-color: rgba(255,255,255,0.4); 
     max-height: 100%;
 }
 
 .inner_grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 0.2fr;
+    grid-template-rows: 0.7fr 1fr;    
     grid-template-areas: 
-    "section1 section2"
-    "section1 section3";
-    border-style: dotted;  
-    grid-gap: 10px;  
+    "jobtitle section1"
+    "section2 section3";
+    grid-row-gap: 10px;
+    grid-column-gap: 5px;      
+}
+
+.jobtitle {
+    grid-area: jobtitle;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.4); 
+    
 }
 
 .section1 {
     grid-area: section1;
     text-align: center;
-    background-color:white;
-    height: inherit;
+    background-image: url("images/profile-pick.jpg");
+    background-size: cover;
 }
 
 .section2 {
     grid-area: section2;
-    background-color: white;
-}
+    padding: 20px;    
+    background-color: rgba(255,255,255,0.4); 
+}   
 
 .section3 {
     grid-area: section3;
-    background-color:white;
-}
-
-#selfie {
-    max-width: 20%;
+    text-align: center;
+    background-color: rgba(255,255,255,0.4); 
+    
 }
 
 footer {
@@ -130,13 +136,13 @@ footer {
         top: 45px;
         bottom: 0px;
         display: grid;
-        grid-template-columns: 150px 1fr 1fr 150px;
+        grid-template-columns: 0.3fr 1fr 1fr 0.3fr;
         grid-template-rows: 45px auto 100px;
         grid-template-areas: 
         ". nav nav ."
         ". main main ."
         ". footer footer .";
-        grid-row-gap: 5px;
+        grid-row-gap: 15px;
     }
 
     .banner {
@@ -162,6 +168,6 @@ footer {
 
     aside {
         float: right;
-        margin-right: 15px;
+        margin: 10px;
     }
 }

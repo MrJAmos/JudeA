@@ -7,30 +7,37 @@
     <meta name="keywords" content="Web Developer, HTML, CSS">
     <meta name="author" content="Jude Amos">
     <meta name="viewport" content="width = device-width, initial-scale = 1.0">
-    <!--<script type="text/javascript" src="myjs.js">-->
-
-    </script>
-    <link rel="stylesheet" type="text/css" href="home.css">
+    <script type="text/javascript" src="home_script.js"></script>
+    <link rel="stylesheet" type="text/css" href="home_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title> Jude </title>
 </head>
 
 <body>
     <div class="banner">
-        <p>judeamos@hotmail.co.uk<br>07786629121</p>
         <aside>
-            <ul>
-                <li><a href="#" target="_self"><img class="icon" src="images/icons/github-icon.png"></a></li>
-                <li><a href="#" target="_self"><img class="icon" src="images/icons/twitter-icon.png"></a></li>
-                <li><a href="#" target="_self"><img class="icon" src="images/icons/linkedin-icon.png"></a></li>
-            </ul>
+            <nav>
+                <span class="fa-stack">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                 </span>    
+                <span class="fa-stack">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-github fa-stack-2x fa-inverse"></i>
+                </span>
+            </nav>
         </aside>
     </div>
 
     <div class="grid">
-        <nav role="navigation">
+        <nav role="navigation" class="mainNavBar">
             <ul>
-                <li><a href="#" target="_self", class = "active">Home</a></li>
+                <li><a href="#" target="_self" , class="active">Home</a></li>
                 <li><a href="#" target="_self">Experience</a></li>
                 <li><a href="#" target="_self">Project List</a></li>
                 <li class="navMenu_test"><a href="#" target="_self">Contact</a></li>
@@ -40,9 +47,15 @@
 
         <main role="main">
             <div class="inner_grid">
+                <header class="jobtitle">
+                    <h1> Junior Front End Developer </h1>
+                    <h3> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, placeat.</h3><br>
+                    <hr><br>
+                    <p> A thinker who likes to question accepted opinions, and who has great enthusiasm for learning. As a recent
+                        graduate studying Computer System Engineering, I am well equipped with knowledge in multiple programming
+                        languages such as, Java, PHP, JavaScript, and HTML and CSS being my favourite</p>
+                </header>
                 <section class="section1">
-                    <img id="selfie" src="images/profile-pick.jpg">
-                    <p>Hello there, my name is Jude. <br> I'm a Front End developer living in the UK</p>
                 </section>
                 <section class="section2">
                     <h2>Hello</h2>
