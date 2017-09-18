@@ -4,84 +4,77 @@
 <head>
     <meta charset="utf-8" />
     <meta name="description" content="Portfolio">
-    <meta name="keywords" content="Web Developer, HTML, CSS">
+    <meta name="keywords" content="Web Developer, HTML, CSS, Javascript">
     <meta name="author" content="Jude Amos">
     <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+
     <script type="text/javascript" src="home_script.js"></script>
     <link rel="stylesheet" type="text/css" href="home_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title> Jude </title>
+    <title>Jude Amos</title>
 </head>
 
 <body>
-    <div class="banner">
-        <aside>
-            <nav>
-                <span class="fa-stack">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                 </span>    
-                <span class="fa-stack">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-                <span class="fa-stack">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-github fa-stack-2x fa-inverse"></i>
-                </span>
-            </nav>
-        </aside>
-    </div>
-
-    <div class="grid">
-        <nav role="navigation" class="mainNavBar">
+    <div class="banner col-m-12 col-12"></div>
+    <div class="wrapper">
+        <nav role="navigation" class="pageNav">
+            <!-- <button class="fa fa-align-justify button-m"></button>-->
             <ul>
-                <li><a href="#" target="_self" , class="active">Home</a></li>
-                <li><a href="#" target="_self">Experience</a></li>
-                <li><a href="#" target="_self">Project List</a></li>
-                <li class="navMenu_test"><a href="#" target="_self">Contact</a></li>
+                <li><a href="#" target="_self">Home</a> <span class="fa"><a href="javascript:void(0);" onclick="dropMenu()" id="menuIcon" class="fa-align-justify"></a></span></li>
+                <div class="hide-menu" id="display-menu">
+                    <li><a href="#" target="_self">Experience</a></li>
+                    <li><a href="#" target="_self">Project</a></li>
+                    <li><a href="#" target="_self">contact</a></li>
+                </div>
             </ul>
         </nav>
 
-
         <main role="main">
-            <div class="inner_grid">
-                <header class="jobtitle">
-                    <h1> Junior Front End Developer </h1>
-                    <h3> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, placeat.</h3><br>
-                    <hr><br>
-                    <p> A thinker who likes to question accepted opinions, and who has great enthusiasm for learning. As a recent
-                        graduate studying Computer System Engineering, I am well equipped with knowledge in multiple programming
-                        languages such as, Java, PHP, JavaScript, and HTML and CSS being my favourite</p>
-                </header>
-                <section class="section1">
-                </section>
-                <section class="section2">
-                    <h2>Hello</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere aperiam iure magni omnis, repudiandae
-                        placeat veritatis, asperiores doloremque, libero unde beatae eius. Dolor ab veniam recusandae. Odit
-                        recusandae voluptatum sint?</p>
-                </section>
-                <section class="section3">
-                    <h2>Hello World</h2>
-                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur iure omnis sequi hic iusto sapiente
-                        eaque neque aliquid libero optio ducimus, exercitationem veniam maxime consequuntur quos numquam
-                        nobis sit! Quia?
-                    </p>
+            <div class="row">
+                <section>
+                    <header>
+                        <h1>Jude Amos</h1>
+                        <h3>Junior Front End Developer</h2>
+                    </header>
+                    <aside><img src="images/rsz_profile-pick.png" alt="profile pick"></aside>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, numquam nobis libero velit laboriosam
+                        excepturi distinctio, accusantium maiores harum, exercitationem asperiores omnis non nulla fugit
+                        ab cupiditate ut dignissimos quo?</p>
                 </section>
             </div>
+
+            <div class="row">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Learn More</a></li>
+                            <li><a href="#">Recent Projects</a></li>
+                        </ul>
+                    </nav>
+            </div>
+
+            <div class="row">
+                <address>
+                    <div class="contactInfo" onclick="dropContactMenu()">
+                        <img src="images\icons\email-2-icon.png" alt="email icon">
+                        <p>Email: <span>judeamos@gmail.com</span></p>
+                        <span id="contactMenuIcon" class="fa fa-angle-down"></span>
+                    </div>
+                    <div id="display-contactMenu" class="hide-menu">
+                        <div class="contactInfo">
+                            <img src="images\icons\cell-phone-icon-7445.png" alt="email icon">
+                            <p>Phone: <span>07783328645</span></p>
+                        </div>
+                        <div class="contactInfo">
+                            <img src="images\icons\Plus-icon.png" alt="email icon">
+                            <p>Follow me on: <span>linkedin</span> | <span>Twitter</span></p>
+                        </div>
+                    </div>
+                </address>
+            </div>
+
         </main>
-
-        <footer role="footer">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi velit at, delectus maiores nobis, <br> voluptatem
-                ab qui fugit eos itaque dignissimos! Veniam veritatis a, iste necessitatibus ab reprehenderit voluptatem
-                asperiores dolorum dignissimos dolorem similique. Sunt dolores in accusantium ad temporibus?
-            </P>
-        </footer>
     </div>
-
-
 </body>
 
 </html>
