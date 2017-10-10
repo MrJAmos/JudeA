@@ -4,22 +4,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="description" content="Portfolio">
-    <meta name="keywords" content="Web Developer, HTML, CSS, Javascript">
+    <meta name="keywords" content="Web Deve loper, HTML, CSS, Javascript">
     <meta name="author" content="Jude Amos">
     <meta name="viewport" content="width = device-width, initial-scale = 1.0">
 
     <script type="text/javascript" src="home_script.js"></script>
-    <link rel="stylesheet" type="text/css" href="home_style.css">
+    <link rel="stylesheet" type="text/css" href="home_page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Jude Amos</title>
 </head>
 
 <body>
-    <div class="banner col-m-12 col-12"></div>
     <div class="wrapper">
-        <nav role="navigation" class="pageNav">
-            <!-- <button class="fa fa-align-justify button-m"></button>-->
+        <nav role="navigation" class="pageNav col-12 col-m-12">
             <ul>
                 <li><a href="#" target="_self">Home</a> <span class="fa"><a href="javascript:void(0);" onclick="dropMenu()" id="menuIcon" class="fa-align-justify"></a></span></li>
                 <div class="hide-menu" id="display-menu">
@@ -30,50 +28,33 @@
             </ul>
         </nav>
 
-        <main role="main">
-            <div class="row">
-                <section>
+        <div class="filter col-12">
+            <main role="main" class="col-12 col-m-12">
+                <section class="col-8 col-m-8">
                     <header>
                         <h1>Jude Amos</h1>
-                        <h3>Junior Front End Developer</h2>
+                        <h3>Junior Front End Developer</h3>
                     </header>
-                    <aside><img src="images/rsz_profile-pick.png" alt="profile pick"></aside>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, numquam nobis libero velit laboriosam
-                        excepturi distinctio, accusantium maiores harum, exercitationem asperiores omnis non nulla fugit
-                        ab cupiditate ut dignissimos quo?</p>
+                    <p>
+                        Hello, I'm jude, and welcome to my portfolio. I enjoy building everything from small business sites to rich interactive web
+                        apps if you are seeking a front end web developer or an employer looking to hire, you can get in
+                        touch with me <span>here </span>
+                    </p>
                 </section>
-            </div>
-
-            <div class="row">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Learn More</a></li>
-                            <li><a href="#">Recent Projects</a></li>
-                        </ul>
-                    </nav>
-            </div>
-
-            <div class="row">
-                <address>
-                    <div class="contactInfo" onclick="dropContactMenu()">
-                        <img src="images\icons\email-2-icon.png" alt="email icon">
-                        <p>Email: <span>judeamos@gmail.com</span></p>
-                        <span id="contactMenuIcon" class="fa fa-angle-down"></span>
+                <aside class="col-4 col-m-8">
+                    <div>
+                        <img src="images\background-images\31-.jpg" alt="devices" usemap="#devices">
+                        <map name="devices"></map>
                     </div>
-                    <div id="display-contactMenu" class="hide-menu">
-                        <div class="contactInfo">
-                            <img src="images\icons\cell-phone-icon-7445.png" alt="email icon">
-                            <p>Phone: <span>07783328645</span></p>
-                        </div>
-                        <div class="contactInfo">
-                            <img src="images\icons\Plus-icon.png" alt="email icon">
-                            <p>Follow me on: <span>linkedin</span> | <span>Twitter</span></p>
-                        </div>
-                    </div>
-                </address>
-            </div>
-
-        </main>
+                </aside>
+            </main>
+        </div>
+        <div class="button-container col-12"></div>
+        <button class="button1"> Learn More</button>
+        <button class="button2">Recent Projects</button>
+        <footer class="col-12">
+            <span class="fa fa-angle-down"></span>
+        </footer>
     </div>
 </body>
 

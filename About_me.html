@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Portfolio">
+    <meta name="keywords" content="Web Developer, HTML, CSS, Javascript">
+    <meta name="author" content="Jude Amos">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+
+    <script type="text/javascript" src="about_me.js"></script>
+    <link rel="stylesheet" type="text/css" href="about_me.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Jude Amos</title>
+</head>
+
+<body>
+    <div class="banner">
+        <aside> <a href="images\other\Jude-Amos-CV-2017.docx" download="J.Amos CV.docx"> My CV : <span class="fa fa-download"></span></a></aside>
+    </div>
+    <div class="wrapper col-9 col-m-12">
+        <nav role="navigation" class="pageNav col-12 col-m-12">
+            <ul>
+                <li><a href="#" target="_self">Home</a> <span class="fa"><a href="javascript:void(0);" onclick="dropMenu()" id="menuIcon" class="fa-align-justify"></a></span></li>
+                <div class="hide-menu" id="display-menu">
+                    <li><a href="#" target="_self">Experience</a></li>
+                    <li><a href="#" target="_self">Project</a></li>
+                    <li><a href="#" target="_self">contact</a></li>
+                </div>
+            </ul>
+        </nav>
+        <main role="main" class="col-m-12 col-12">
+            <div class="row">
+                <section class="col-m-12 col-12">
+                    <aside class="col-m-12 col-12">
+                        <header class="col-m-12 col-10">
+                            <h1>Jude Amos</h1>
+                            <h3>Junior Front End Developer</h2>
+                        </header>
+                        <div class="col-m-12 col-12">
+                            <p onclick="dropPara()"> Hey there, thinker who likes to question accepted opinions, and who has great enthusiasm for learning.
+                                As a recent graduate studying Computer System Engineering...</p> <span id="contactMenuIcon"
+                                class="fa fa-angle-down"></span>
+                            <p class="hide-menu">, I am well equipped with knowledge in multiple programming languages such as, Java, PHP, HTML
+                                and CSS, with JavaScript being my favourite. I hope to utilise the skills that I have acquired
+                                from both my education and previous jobs, to be effective in any potential job role I obtain.</p>
+                        </div>
+                    </aside>
+                </section>
+            </div>
+
+            <div class="row">
+                <nav class="col-m-12 col-11">
+                    <ul>
+                        <li class="col-m-8 col-8"><a href="#">Learn More</a></li>
+                        <li class="col-m-4 col-4"><a href="#">Recent Projects</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="row">
+                <address class="col-m-12 col-10">
+                    <div class="contactInfo col-m-4 col-4" onclick="dropContactMenu()">
+                        <img src="images\icons\email-2-icon.png" alt="email icon">
+                        <p>Email:<br><span>judeamos@gmail.com</span></p>
+                    </div>
+                    <div class="contactInfo col-m-4 col-4">
+                        <img src="images\icons\cell-phone-icon-7445.png" alt="email icon">
+                        <p>Phone:<br><span>07783328645</span></p>
+                    </div>
+                    <div class="contactInfo col-m-4 col-4">
+                        <img src="images\icons\Plus-icon.png" alt="email icon">
+                        <p>Follow me on:<br><span>linkedin</span> | <span>Twitter</span></p>
+                    </div>
+                </address>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>
