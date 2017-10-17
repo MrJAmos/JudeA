@@ -19,63 +19,73 @@
 
 <body>
 
-    <div class="wrapper col-10 col-m-12">
+    <div class="wrapper col-12 col-m-12">
 
         <div class="landing-page-background">
 
-            <nav role="navigation" class="pageNav" >
+            <div class="line-break">
 
-                <div class="mobile-nav" onclick="dropMenu()">
+                <nav role="navigation" class="pageNav">
 
-                    <h1>Jude Amos</h1>
+                    <div class="mobile-nav" onclick="dropMenu()">
 
-                    <aside>
-                        <a href="#">Portfolio <i id="menuIcon" class="fa fa-align-justify"></i></a></span>
-                        <div class="hide-mobile-element show-mobile-element">
-                            <a href="#">About Me</a>
-                            <a href="#">Contact</a>
-                        </div>
-                    </aside>
-                </div>
+                        <h1>Jude Amos</h1>
 
-                <div class="hide-element mobile-dropmenu" id="display-menu">
-                    <a href="#">Portfolio</a>                       
-                    <a href="#">About Me</a>
-                    <a href="#">Contact</a>
-                </div>
-            </nav>
+                        <aside>
+                            <a href="#">Portfolio <i id="menuIcon" class="fa fa-align-justify"></i></a></span>
+                            <div class="hide-mobile-element show-mobile-element">
+                                <a href="#">About Me</a>
+                                <a href="#">Contact</a>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="hide-element mobile-dropmenu" id="display-menu">
+                        <a href="#">Portfolio</a>
+                        <a href="#">About Me</a>
+                        <a href="#">Contact</a>
+                    </div>
+
+                </nav>
+            </div>
 
             <section class="welcome-sect">
-                <h1>I'm a Front End Developer Based in the UK.</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, repudiandae nulla facere commodi eos ratione
-                    reprehenderit id aspernatur .</p>
+                <h1>Front End Web Developer</h1>
+                <p>Welcome to my portfolio, I enjoy building everything from small<br class="mobile-br"> business
+                    <br class="desktop-br"> sites to rich interactive web apps. if you are seeking<br class="mobile-br">                    a front end web <br class="desktop-br">developer or an employer looking to hire,
+                    <br class="mobile-br"> you can get in <br class="desktop-br">touch with me <a href="#">here</a>.</p>
 
-                <div><button class="hire-btn">Hire Me</button> <button class="resume-btn"><span>Resume</span><img src="../Ref/icons8-Download-64.png"></button> </div>
-                <img class="browser-img" src="../Ref/browser.png">
+                <button class="hire-btn">Hire Me</button>
+                <!-- <button class="resume-btn"><span>Resume</span><i class="fa fa-download"></i></button>-->
+                <img class="browser-img" src="../Ref/Webp.net-resizeimage.png">
             </section>
         </div>
 
         <section class="latest-project-sect col-12 col-m-12">
-            <h2>My Latest Project</h2>
+            <h2>Project</h2>
             <aside>
-                <div><img src="../Ref/temp-background.jpeg">
-                    <p><span>First Project</span><br>Web Desgin Freelance</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, illo dicta excepturi blanditiis nostrum
+                    assumenda id iusto qui impedit quos!</p>
+                <div><img class="test">
+                    <p><span class="title-change">Battleship Game</span><br>Web Design/Developement</p>
                 </div>
-                <div><img src="../Ref/temp-background.jpeg">
-                    <p><span>First Project</span><br>Web Desgin Freelance</p>
+                <div><img class="test">
+                    <p><span class="title-change">JCinema</span><br>Web Design/Developement</p>
                 </div>
-                <div><img src="../Ref/temp-background.jpeg">
-                    <p><span>First Project</span><br>Web Desgin Freelance</p>
+                <div><img class="test">
+                    <p><span class="title-change">Garage Website</span><br>Web Design/Developement</p>
                 </div>
             </aside>
         </section>
 
-        <section class="about-me-sect col-12 col-m-12">
+        <section class="about-me-sect">
             <aside class="col-6 col-m-12">
                 <h1>About Me</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, architecto cumque. Sapiente porro harum
-                    modi. Atque eaque autem corrupti eum optio accusantium? Enim est quis, dicta perferendis ullam saepe
-                    ab.
+                <p>I am a thinker who likes to question accepted opinions, and who has great enthusiasm for learning. As a recent
+                    graduate studying Computer System Engineering, I am well equipped with knowledge in multiple programming
+                    languages such as, Java, PHP, HTML and CSS, with JavaScript being my favourite. I hope to utilise the
+                    skills that I have acquired from both my education and previous jobs, to be effective in any potential
+                    job role I obtain.
                     <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam alias similique illum
                     quaerat autem labore rerum ad distinctio et.
                 </p>
@@ -86,29 +96,28 @@
                 </div>
             </aside>
 
-            <aside class="whats-new col-6 col-m-12">
+            <aside class="whats-new">
                 <h1>Whats New</h1>
                 <div>
-                    <img src="../Ref/temp-background.jpeg">
-                    <p>Upcoming Project of Mine <br><span>Web Design - 28/07/2017 - Admin</span></p>
+                    <img class="test">
+                    <p><span class="title-change">Upcoming Project of Mine</span> <br>Web Design - 28/07/2017 - <span class="accent-color">Admin</span></p>
                 </div>
-
                 <div>
-                    <img src="../Ref/temp-background.jpeg">
-                    <p>Upcoming Project of Mine <br><span>Web Design - 28/07/2017 - Admin</span></p>
+                    <img class="test">
+                    <p><span class="title-change">Upcoming Project of Mine</span> <br>Web Design - 28/07/2017 - <span class="accent-color">Admin</span></p>
                 </div>
             </aside>
         </section>
 
-        <footer class="hide-element show-element col-12 col-m-12">
-            <p>Copyright 2017 Ja | Just Amazing</p>
-            <nav>
-                <ul>
-                    <li>Portfolio</li>
-                    <li>About Me</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
+        <footer>
+            <p class="fa fa-copyright"> Copyright 2017 Jude Amos</p>
+            <aside class="hide-element show-footer">
+                <nav>
+                    <a href="#">Portfolio</a>
+                    <a href="#">About Me</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </aside>
         </footer>
     </div>
 

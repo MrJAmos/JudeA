@@ -3,18 +3,13 @@
     padding: 0px; 
     box-sizing: border-box;
     text-decoration: none; 
-    list-style: none;        
+    list-style: none; 
 }
 html {
     font-family: "Titillium Web",sans-serif;;
 }
 
 /*This is for mobile phones*/
-.row::after {
-    content:"";
-    clear: both;
-}
-
 [class*="col-"] {
     float: left;
     width: 100%;   
@@ -27,14 +22,19 @@ html {
     -webkit-flex-direction: column;
     flex-direction: column;
 }
-
-@media only screen and (min-width: 320px) {
     
 .landing-page-background {
     background-image: url("../ref/Website-Design-Background.png");
     background-size: cover;
+    border-bottom: 1px solid black;
 }
+
+.line-break {
+    background: rgba(0, 0, 0, 0.2);/* Green background with 30% opacity */    
+}
+
 .pageNav {
+    overflow: hidden;
     display: flex;
     display: -webkit-flex;
     flex-wrap: nowrap;
@@ -42,7 +42,6 @@ html {
     -webkit-flex-direction: column;
     flex-direction: column;
     color: white;
-    background: rgba(0, 0, 0, 0.2) /* Green background with 30% opacity */
 }
 
 .pageNav .mobile-nav {
@@ -52,13 +51,13 @@ html {
     -webkit-flex-wrap: wrap;
     align-items: center;
     -webkit-align-items: center;
-    padding: 15px 15px;
+    padding: 15px;
     border-bottom: 2px solid #e5e5e5;        
 }
 
 .pageNav .mobile-nav h1 {
     font-weight: bolder;
-    font-size: 7vw;
+    font-size: calc(8vw - 2vw);
     color: #e74a43;
 }
 
@@ -66,19 +65,19 @@ html {
     display: flex;
     display: -webkit-flex;    
     margin-left: auto;
-    font-size: 3vw;
+    font-size: calc(4vw - 1vw);
 }
 
 .pageNav .mobile-nav aside a,.show-mobile-element {
     margin: auto;    
     color: white;
 }
+
 .pageNav .mobile-nav aside a i {
     padding: 5px;
     color: white;
     margin-left: 10px;    
     font-style: normal;
-    
 }
 
 .pageNav .mobile-dropmenu {
@@ -91,7 +90,6 @@ html {
     color: white;
 } 
 
-
 /*----*/
 
 .welcome-sect {
@@ -100,127 +98,119 @@ html {
     flex-direction: column;
     -webkit-flex-direction: column;    
     padding: 20px 15px 0px 15px;
-    border-bottom: 1px solid black;
     color:white;
     text-align: center;
 }
 
 .welcome-sect h1 {
-    font-size: 5vm;
+    font-size: calc(10vw - 2.5vw);    
 }
 
 .welcome-sect p {
-    font-size: 2vm;
-    margin-top:30px;
+    font-size: calc(4vw - 1vw);
+    margin-top:10px;
 }
 
-.welcome-sect div {
-    margin-top:30px;
-    display: flex;
-    display: -webkit-flex; 
-    -webkit-justify-content: center;
-    justify-content: center;
+.welcome-sect p a {
+    color: #1477CC;
 }
 
 .welcome-sect button {
+    font-size: calc(4vw - 1vw);
+    padding: 7px 15px;        
     border: none;
-    padding: 7px 15px;
     border-radius: 5px;
     font-weight: bold;
     color:white;
-}
-
-.welcome-sect .hire-btn {
     background-color: #e74a43; 
-    margin-right: 10px;
-    
+    margin: 15px 0px;
+    align-self: center;
 }
-
-.welcome-sect .resume-btn {
-    display: flex;
-    display: -webkit-flex; 
-    -webkit-justify-content: center;
-    justify-content: center;
-    padding: 0px;
-    background-color: #1477CC;
-}
-
-.welcome-sect .resume-btn span {
-    margin: auto;
-}
-
-.welcome-sect button img {
-    max-width: 25%;
-    height: auto;
-    padding: 0px 5px;
-    border-left:1px solid;
-}
-
 
 .welcome-sect .browser-img {
-    margin-top:40px;
     max-width: 100%;
-    height: auto;
-    -webkit-align-self: flex-end;
-    align-self: flex-end;
-    margin-left: auto;
-    margin-right: auto;
-    
+    height: 30vw;
 }
 
+.welcome-sect p .desktop-br {
+    display:none;
+}
 
+/*--- This section Above is complete for Mobile (better coding can be applied here)*/
 
 .latest-project-sect {
     padding: 20px 15px;
-    background-color: #e5e5e5;
+    background-color: rgb(240, 240, 240);
+    border-bottom: 1px solid;
 }
 
-.latest-project-sect aside {
-    padding: 30px 0px;
+.latest-project-sect aside, .about-me-sect, .about-me-sect aside {
+    display: flex;
+    display: -webkit-flex; 
+    flex-direction: column;
+    -webkit-flex-direction: column;  
+    margin-top: 30px;
 }
 
-.latest-project-sect aside div {
-    display: block;
-    border:1px solid;
+.latest-project-sect h2, .about-me-sect aside h1 {
+    font-size: calc(8vw - 2vw);  
+}
+
+.latest-project-sect aside div, .about-me-sect .whats-new div{
+    display: flex;
+    display: -webkit-flex; 
+    -webkit-align-items: center;
+    align-items: center;
     background-color:white;
 }
 
-.latest-project-sect aside div:not(:last-child) {
-    margin-bottom: 10px;
+.latest-project-sect aside p {
+    margin-bottom: 15px;
+    color: black;
+}
+
+.latest-project-sect aside div:nth-child(3) {
+    margin: 15px 0px;
 } 
 
-.latest-project-sect img, .about-me-sect aside:last-child div img  {
-    max-height: auto;
-    max-width: 100px;
+.latest-project-sect .test, .about-me-sect .test {
+    background-image:  url("../Ref/temp-background.jpeg");
+    background-size: 100% 100%;
+    width:  calc(30vw - 3vw);
+    height: calc(30vw - 3vw);
+    border-right: 3px solid;
 }
 
-.latest-project-sect div p {
-    float: right;
-    font-size: 15px;
-    color:#e5e5e5;   
+.latest-project-sect div:not(:first-child) p, .about-me-sect .whats-new div p  {
+    font-size: calc(4vw - 1vw);    
+    color:#e5e5e5;  
+    margin: auto;
     text-align: center;
-    margin: 30px 10px 0px 0px; 
 }
 
-.latest-project-sect div p span{
-    font-size: 20px;
-    color:black;
+.latest-project-sect .test, .about-me-sect .test {
+    background-image:  url("../Ref/temp-background.jpeg");
+    background-size: 100% 100%;
+    width:  calc(30vw - 3vw);
+    height: calc(30vw - 3vw);
+    border-right: 3px solid;
 }
 
-.about-me-sect h1 {
-    font-size: 25px;
+.title-change {
+    font-size: calc(6vw - 1.5vw);
+    color: #1477CC;
+    text-align: center;
 }
 
-.about-me-sect aside {
-    padding: 20px 15px;    
+/*-----This Section Above has been Completed---------*/
+
+.about-me-sect {
+    padding: 20px 15px; 
+    margin-top: 0px;    
 }
 
-.about-me-sect aside h1 {
-    padding: 10px 0px 30px 0px;    
-}
-
-.about-me-sect aside:first-child div {
-    padding: 20px 0px 0px 0px;
+.about-me-sect aside:first-child div, .about-me-sect aside, .about-me-sect aside:first-child p{
+    margin-top: 20px;
 }
 
 .about-me-sect aside:first-child div img {
@@ -228,27 +218,31 @@ html {
     height: auto;
 }
 
-.about-me-sect aside:last-child div {
-    border: 1px solid;    
-    padding-right: 10px;
+.about-me-sect .whats-new div {
+    margin: 10px 0px;
 }
 
-.about-me-sect aside:last-child div:last-child{
-    margin-top: 10px;
+.about-me-sect .whats-new div img {
+    border-right: 0px;
 }
 
-.about-me-sect aside:last-child div p{    
-    float:right;
-    font-size: 12px;
-    margin: 40px 0px;
-    text-align: center;
+.about-me-sect aside:last-child div:not(:last-child) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cccccc;
 }
 
-.about-me-sect aside:last-child div p span {
-    font-size: 10px;
-    color:#cccccc;    
-    
-}    
+.accent-color {
+    color: #e74a43;
+}
+
+footer {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    background-color: rgb(240, 240, 240);
+    padding: 15px 0px;
+}
 
 .hide-element,.hide-mobile-element {
     display: none;
@@ -258,12 +252,22 @@ html {
     display: initial;
 }
 
-}
-
 @media only screen and (min-width: 736px) {
+
+.pageNav {
+    padding: 0px 15px;
+}
   
 .pageNav #menuIcon, .mobile-dropmenu {
     display:none;
+}
+
+.pageNav .mobile-nav h1 {
+    font-size: calc(8vw - 3vw);
+}
+
+.pageNav .mobile-nav aside {
+    font-size: calc(4vw - 2vw);
 }
 
 .show-mobile-element {
@@ -276,117 +280,144 @@ html {
 .pageNav .mobile-nav aside a {
     padding: 10px;
 }
+
 .pageNav .mobile-nav aside a:not(:last-child) {
     margin-right:10px;
 }
 
 .pageNav div a:hover {
-    color: #1477CC;
+    border-radius: 5px;
+    background-color: rgba(198, 198, 198, 0.19);
 }
 
-/*--Navigation DONE!---*/
+.pageNav .mobile-nav aside > a {
+    border-radius: 5px;
+    background-color: rgba(198, 198, 198, 0.19);
+}
+
+.welcome-sect h1, .welcome-sect p  {
+    margin-top: 45px;
+}
+
+.welcome-sect button {
+    font-size: calc(4vw - 2vw);
+}
+
+.welcome-sect .browser-img {
+    margin-top: 20px;
+}
+/*--This sector above is reasonably done!---*/
+
+.latest-project-sect h2, .about-me-sect aside h1 {
+    font-size: calc(8vw - 4vw);  
+}
 
 .latest-project-sect aside {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-between;
-    -webkit-justify-content: space-between;
-}
-
-.latest-project-sect aside div:not(:last-child){
-    margin-bottom:0px;
+    flex-direction: row;
+    -webkit-flex-direction: row;  
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
 }
 
 .latest-project-sect aside div {
-    min-width: 230px;
-    text-align: center;
-    border-color: #e5e5e5;
-    border-radius: 0px 0px 10px 10px;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+.latest-project-sect .test { 
+    width:  30vw;
+    height: calc(35vw - 15vw);
+}
+
+.latest-project-sect aside div:nth-child(2) {
+    margin: 0px 30px;
+}
+
+.latest-project-sect .title-change {
+    font-size: calc(6vw - 3vw);
 }
 
 .latest-project-sect aside div p {
-    float:none;
-    margin:0px;
-    padding: 15px;
+    font-size: calc(4vw - 2.5vw);   
+    padding: 10px;
 }
 
-.latest-project-sect aside div img {
-    max-width: 300px;
-    border-bottom: 1px solid #e5e5e5;
+.latest-project-sect img {
+    max-width:100%;
+    height: auto;
+    border-bottom: 3px solid black;
+    border-right: none;
 }
 
 .about-me-sect  {
     border-bottom: 1px solid;
+    flex-direction: row; 
+    -webkit-flex-direction: row; 
+    -webkit-justify-content: space-between;  
+    justify-content: space-between;  
+}
+
+.about-me-sect .title-change {
+    font-size: calc(6vw - 3.5vw);    
+}
+
+.about-me-sect aside:first-child {
+    flex: 1;
+}
+
+.about-me-sect .whats-new {
+    padding: 0px 10px;
+}
+
+.about-me-sect .whats-new div p {
+    font-size: calc(4vw - 2.5vw);       
+}
+
+.about-me-sect aside .test{
+    width:  103px;
+    height: 103px;
 }
 
 footer {
-    padding: 30px 15px;
+    padding: 25px 15px;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    background-color: rgb(240, 240, 240);
 }
+
+footer .show-footer {
+    display: initial;
+}
+
+footer nav a:not(:last-child){
+    border-right: 1px solid;
+    padding: 0px 10px;
+}
+
+footer nav a:last-child {
+    padding-left:10px;
+}
+
 footer p {
     display: inline-block;
+
 }
-  .col-m-1 {width: 8.33%;}
-  .col-m-2 {width: 16.66%;}
-  .col-m-3 {width: 25%;}
-  .col-m-4 {width: 33.33%;}
-  .col-m-5 {width: 41.66%;}
-  .col-m-6 {width: 50%;}
-  .col-m-7 {width: 58.33%;}
-  .col-m-8 {width: 66.66%;}
-  .col-m-9 {width: 75%;}
-  .col-m-10 {width: 83.33%;}
-  .col-m-11 {width: 91.66%;}
-  .col-m-12 {width: 100%;}
 }
 
 @media only screen and (min-width:1024px) {
 
-    body {
-        display: flex;
-        display: -webkit-flex;
-        justify-content: space-around;
-        -webkit-justify-content: space-around;
+    .welcome-sect p {
+        font-size:  30px;
     }
 
-    .about-me-sect  {
-        background-color: #e5e5e5;
+    .welcome-sect p .mobile-br {
+        display: none;
     }
 
-    .about-me-sect aside:last-child div {
-        border:none;
+    .welcome-sect p .desktop-br {
+        display: initial;
     }
 
-    .about-me-sect aside:last-child div:not(:last-child) {
-        border-bottom: 1px solid #cccccc;
-        padding-bottom: 10px;
+    .welcome-sect div {
+        margin: 50px 0px;     
     }
-
-    .about-me-sect aside:last-child img{    
-        display:inline-block;
-    }
-
-    .about-me-sect aside:last-child div p{    
-        float:right;
-        font-size: 20px;
-        margin: 30px 0px;
-        text-align: center;
-    }
-    
-    .about-me-sect aside:last-child div p span {
-        font-size: 15px;
-    }
-
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
 }
-
