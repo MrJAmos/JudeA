@@ -1,43 +1,21 @@
 
+
 function dropMenu() {
     'use strict';
     let x = document.getElementById('display-menu');
     let menu = document.getElementById('menuIcon');
     let mq = window.matchMedia("(min-width: 736px)");
 
-    if (!mq.matches){
+    if (!mq.matches) {
         if (x.className === "hide-element mobile-dropmenu") {
             x.className += " show-element";
             menu.style.color = "#e74a43";
-            
+
         }
         else {
             x.className = "hide-element mobile-dropmenu";
-            menu.style.color = "white";            
+            menu.style.color = "white";
         }
     }
 }
 
-function dropContactMenu() {
-    'use strict';
-    let mq = window.matchMedia("(min-width: 600px)");
-    mq.addListener(weight(mq));
-}
-
-function weight(mq) {
-    if (!mq.matches) {
-        let x = document.getElementById('display-contactMenu');
-        let menu = document.getElementById('contactMenuIcon');
-        if (x.className === "hide-menu") {
-            x.className += " show-menu";
-            menu.className = "fa fa-angle-up";
-        }
-        else {
-            x.className = "hide-menu";
-            menu.className = "fa fa-angle-down";
-        }
-    }
-    else {
-
-    }
-}

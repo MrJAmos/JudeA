@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title> Contact Page </title>
+    <meta name="description" content="Portfolio Contact">
+    <meta name="author" content="Jude Amos">
+    <meta name="viewport" content="width = device-width, initial scale=1.0">
+
+    <script type="text/javascript" src="../Assets/portfolio-javascript.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Assets/contact-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</header>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="line-break">
+
+            <nav role="navigation" class="pageNav">
+
+                <div class="mobile-nav" onclick="dropMenu()">
+
+                    <h1>Jude Amos</h1>
+
+                    <aside>
+                        <a href="#as">Portfolio
+                            <i id="menuIcon" class="fa fa-align-justify"></i>
+                        </a>
+                        </span>
+                        <div class="hide-mobile-element show-mobile-element">
+                            <a href="portfolio.html#about-me">About Me</a>
+                            <a href="contact-page.html">Contact</a>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="hide-element mobile-dropmenu" id="display-menu">
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="portfolio.html#about-me">About Me</a>
+                    <a href="contact-page.html">Contact</a>
+                </div>
+
+            </nav>
+        </div>
+
+        <main role="main">
+            <div class="container">
+                <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="Afghanistan" title="Afghanistan">Afghanistan</option>
+                        <option value="Åland Islands" title="Åland Islands">Åland Islands</option>
+                        <option value="Albania" title="Albania">Albania</option>
+
+                    </select>
+                    </select>
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject..">
+
+                    <label for="subject">Description</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    <div>
+                        <input type="submit" value="Submit">
+
+                        <a href="#">
+                            <button> Resume |
+                                <span class="fa fa-download"></span>
+                            </button>
+                        </a><br>
+                        
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p class="fa fa-copyright"> 2017
+                <span>Jude Amos </span>
+            </p>
+            <aside class="hide-element show-footer">
+                <nav role="navigation">
+                    <a href="#">Portfolio</a>
+                    <a href="#">About Me</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </aside>
+        </footer>
+    </div>
+</body>
+
+</html>

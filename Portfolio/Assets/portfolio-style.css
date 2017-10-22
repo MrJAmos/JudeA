@@ -123,7 +123,7 @@ html {
     font-weight: bold;
     color:white;
     background-color: #e74a43; 
-    margin: 15px 0px;
+    margin: 15px 0px 15px;
     align-self: center;
 }
 
@@ -141,94 +141,171 @@ html {
 .latest-project-sect {
     padding: 20px 15px;
     background-color: rgb(240, 240, 240);
-    border-bottom: 1px solid;
+    border-bottom: 1px solid white;
 }
 
-.latest-project-sect aside, .about-me-sect, .about-me-sect aside {
+.latest-project-sect aside{
+    overflow: auto;    
+    background-color: #1477CC;    
+    height: 320px;
+    margin-top: 20px;
+    border-top: 1px solid white;    
+    -webkit-box-shadow: inset 10px 10px 300px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 10px 10px 300px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 10px 10px 300px 0px rgba(0,0,0,0.75);
+}
+
+.latest-project-sect aside div {
+    text-align: center;
     display: flex;
-    display: -webkit-flex; 
-    flex-direction: column;
-    -webkit-flex-direction: column;  
-    margin-top: 30px;
+    display: -webkit-flex;
+    background-color: white;
 }
 
-.latest-project-sect h2, .about-me-sect aside h1 {
-    font-size: calc(8vw - 2vw);  
+.latest-project-sect aside > div {
+    margin-top: 10px;
 }
 
-.latest-project-sect aside div, .about-me-sect .whats-new div{
-    display: flex;
-    display: -webkit-flex; 
-    -webkit-align-items: center;
-    align-items: center;
-    background-color:white;
+.latest-project-sect aside div .project-image {
+    width: 100px;
+    height: 100px;
+    background-color: #cccccc;
 }
 
-.latest-project-sect aside p {
-    margin-bottom: 15px;
-    color: black;
-}
-
-.latest-project-sect aside div:nth-child(3) {
-    margin: 15px 0px;
-} 
-
-.latest-project-sect .test, .about-me-sect .test {
-    background-image:  url("../Ref/temp-background.jpeg");
-    background-size: 100% 100%;
-    width:  calc(30vw - 3vw);
-    height: calc(30vw - 3vw);
-    border-right: 3px solid;
-}
-
-.latest-project-sect div:not(:first-child) p, .about-me-sect .whats-new div p  {
-    font-size: calc(4vw - 1vw);    
-    color:#e5e5e5;  
+.latest-project-sect aside div p {
     margin: auto;
-    text-align: center;
+    color: #cccccc;
+    font-size: 13px;
 }
 
-.latest-project-sect .test, .about-me-sect .test {
-    background-image:  url("../Ref/temp-background.jpeg");
-    background-size: 100% 100%;
-    width:  calc(30vw - 3vw);
-    height: calc(30vw - 3vw);
-    border-right: 3px solid;
-}
-
-.title-change {
-    font-size: calc(6vw - 1.5vw);
+.latest-project-sect aside .title-change {
     color: #1477CC;
-    text-align: center;
+    font-size: 15px;
 }
 
 /*-----This Section Above has been Completed---------*/
 
 .about-me-sect {
+    overflow: hidden;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
     padding: 20px 15px; 
-    margin-top: 0px;    
 }
 
-.about-me-sect aside:first-child div, .about-me-sect aside, .about-me-sect aside:first-child p{
+.about-me-sect .skill-title-visibility{
+    margin-bottom: 35px;
+}
+
+.about-me-sect h1, .latest-project-sect h1 {
+    font-size: 23px;
+}
+
+.about-me-sect aside:first-child {
+    margin-bottom: 40px;
+}
+
+.about-me-sect aside:first-child div, .about-me-sect aside:first-child p{
     margin-top: 20px;
+}
+
+.about-me-sect aside:first-child div {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
 }
 
 .about-me-sect aside:first-child div img {
     width: 35px;
     height: auto;
+    margin: 0px 5px;
+    
 }
 
-.about-me-sect .whats-new div {
+.about-me-sect aside:first-child button{
+    height: 35px;
+    padding: 0px 20px;
+    background-color: #1477CC;
+    margin-right: 20px;
+    color: white;        
+    border:none;
+    border-radius: 10px;
+    font-size:  15px;
+    font-weight: bold;
+}
+
+.about-me-sect aside:last-child {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.about-me-sect .main-skills {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+}
+
+.about-me-sect .main-skills svg{
+    width: 100px;
+    height: 100px;
+}
+
+.about-me-sect .main-skills .outer-circle {
+    fill: none;
+    stroke: #1477CC;
+    stroke-width: 10;
+}
+
+.about-me-sect .main-skills .inner-circle {
+    fill: none;
+    stroke:  #cccccc;
+    stroke-width: 10; 
+}
+.about-me-sect .main-skills .html-level {
+    stroke-dasharray: 160 189;
+}
+
+.about-me-sect .main-skills .css-level {
+    stroke-dasharray: 170 189;
+}
+
+.about-me-sect .main-skills .javascript-level {
+    stroke-dasharray: 120 189;
+}
+
+.about-me-sect .main-skills h3 {
+    text-align: center;
+}
+
+.about-me-sect .main-skills text {
+    color: black;
+}
+
+.about-me-sect .sub-skills {
+    display: flex; 
+    display: -webkit-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about-me-sect .sub-skills .skill-container{
+    background-color: #ddd;
     margin: 10px 0px;
+    width: 300px;
 }
 
-.about-me-sect .whats-new div img {
-    border-right: 0px;
+.about-me-sect .sub-skills .skill{
+    text-align: right;
+    padding-right: 20px;
+    line-height: 35px;
+    color: white;
 }
 
-.about-me-sect aside:last-child div:not(:last-child) {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #cccccc;
+.about-me-sect .sub-skills .photoshop {
+    width: 90%; 
+    background-color: purple;
 }
 
 .accent-color {
@@ -241,7 +318,15 @@ footer {
     justify-content: space-around;
     -webkit-justify-content: space-around;
     background-color: rgb(240, 240, 240);
-    padding: 15px 0px;
+    padding: 50px 0px;
+}
+
+footer span {
+    color: #e74a43;
+}
+
+footer aside nav a {
+    color: black;
 }
 
 .hide-element,.hide-mobile-element {
@@ -308,77 +393,81 @@ footer {
 }
 /*--This sector above is reasonably done!---*/
 
-.latest-project-sect h2, .about-me-sect aside h1 {
-    font-size: calc(8vw - 4vw);  
-}
-
 .latest-project-sect aside {
+    overflow: auto;
+    display: flex;
+    height: initial;
     flex-direction: row;
     -webkit-flex-direction: row;  
     -webkit-justify-content: space-around;
-    justify-content: space-around;
+    justify-content: flex-start;
+    padding: 10px 0px;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-top: 0px;
+    border-bottom: 0px;
+    
 }
 
 .latest-project-sect aside div {
     flex-direction: column;
     -webkit-flex-direction: column;
-}
-.latest-project-sect .test { 
-    width:  30vw;
-    height: calc(35vw - 15vw);
-}
-
-.latest-project-sect aside div:nth-child(2) {
-    margin: 0px 30px;
+    background-color: transparent;
+    background-color: white;
+    margin: 0px 10px;
 }
 
-.latest-project-sect .title-change {
-    font-size: calc(6vw - 3vw);
+.latest-project-sect aside div:not(:first-child) {
+    margin-top: 0px;
+}
+
+.latest-project-sect aside div .project-image {
+    width:200px;
+    width: calc(200px + 3vw);
+    height: 150px;
 }
 
 .latest-project-sect aside div p {
-    font-size: calc(4vw - 2.5vw);   
-    padding: 10px;
+    background-color: white;
+    padding: 10px 0px;
 }
 
-.latest-project-sect img {
-    max-width:100%;
-    height: auto;
-    border-bottom: 3px solid black;
-    border-right: none;
-}
 
 .about-me-sect  {
     border-bottom: 1px solid;
     flex-direction: row; 
-    -webkit-flex-direction: row; 
-    -webkit-justify-content: space-between;  
-    justify-content: space-between;  
+    -webkit-flex-direction: row;  
 }
 
-.about-me-sect .title-change {
-    font-size: calc(6vw - 3.5vw);    
+.about-me-sect .skill-title-visibility {
+    display: none;
 }
 
-.about-me-sect aside:first-child {
-    flex: 1;
+.about-me-sect .skill-title-visibility2 {
+    display: initial;
+    align-self: center;
 }
 
-.about-me-sect .whats-new {
-    padding: 0px 10px;
+.about-me-sect h1, .latest-project-sect h1 {
+    font-size: 35px;
 }
 
-.about-me-sect .whats-new div p {
-    font-size: calc(4vw - 2.5vw);       
+.about-me-sect  aside:first-child{
+    flex:0.7;
 }
 
-.about-me-sect aside .test{
-    width:  103px;
-    height: 103px;
+.about-me-sect  aside:last-child{
+    flex-direction: column-reverse; 
+    align-self: center;
 }
+
+.about-me-sect .sub-skills .skill-container {
+   width: 200px;
+}
+
 
 footer {
-    padding: 25px 15px;
+    padding: 30px 15px;
     justify-content: space-between;
     -webkit-justify-content: space-between;
     background-color: rgb(240, 240, 240);
@@ -389,7 +478,6 @@ footer .show-footer {
 }
 
 footer nav a:not(:last-child){
-    border-right: 1px solid;
     padding: 0px 10px;
 }
 
@@ -419,5 +507,18 @@ footer p {
 
     .welcome-sect div {
         margin: 50px 0px;     
+    }
+
+    .latest-project-sect aside div .project-image {
+        max-width: calc(200px + 6vw);
+        height: 150px;
+    }
+
+    .about-me-sect aside:last-child {
+        padding-top: 40px;
+    }
+
+    .about-me-sect .sub-skills .skill-container {
+        width: 280px;
     }
 }

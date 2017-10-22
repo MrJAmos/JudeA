@@ -1,0 +1,255 @@
+* {
+    margin: 0px;
+    padding: 0px; 
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html {
+    font-family: "Titillium Web",sans-serif;;
+}
+
+body {
+    background-image: url("../ref/Website-Design-Background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+    
+.landing-page-background {
+    background-image: url("../ref/Website-Design-Background.png");
+    background-size: cover;
+    border-bottom: 1px solid black;
+}
+
+.line-break {
+    background: rgba(0, 0, 0, 0.2);/* Green background with 30% opacity */    
+}
+
+.pageNav {
+    overflow: hidden;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    color: white;
+}
+
+.pageNav .mobile-nav {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    align-items: center;
+    -webkit-align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid #e5e5e5;        
+}
+
+.pageNav .mobile-nav h1 {
+    font-weight: bolder;
+    font-size: calc(8vw - 2vw);
+    color: #e74a43;
+}
+
+.pageNav .mobile-nav aside {
+    display: flex;
+    display: -webkit-flex;    
+    margin-left: auto;
+    font-size: calc(4vw - 1vw);
+}
+
+.pageNav .mobile-nav aside a,.show-mobile-element {
+    margin: auto;    
+    color: white;
+}
+
+.pageNav .mobile-nav aside a i {
+    padding: 5px;
+    color: white;
+    margin-left: 10px;    
+    font-style: normal;
+}
+
+.pageNav .mobile-dropmenu {
+    border-bottom: 1px solid #e5e5e5;        
+}
+
+.pageNav #display-menu * {
+    display: block;
+    padding: 15px 15px;
+    color: white;
+} 
+
+.hide-element,.hide-mobile-element {
+    display: none;
+}
+
+.show-element {
+    display: initial;
+}
+.container {
+    padding: 15px;
+}
+
+form {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+input[type=text], select, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #e74a43;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    border:1px solid #1477CC;
+}
+
+main form div button {
+    padding: 12px 20px;    
+    background-color: #1477CC;
+    margin: 0px 10px;
+    color: white;        
+    border:none;
+    border-radius: 4px;
+}
+
+main form div {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+main div img {
+    width: 35px;
+    height: auto;
+    margin: 0px 5px;
+}
+
+
+footer {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    background-color: rgb(240, 240, 240);
+    padding: 50px 50px;
+    border-top: 1px solid white;
+}
+
+footer span {
+    color: #e74a43;
+}
+
+footer aside nav a {
+    color: black;
+}
+
+@media only screen and (min-width: 736px) {
+
+.pageNav {
+    padding: 0px 15px;
+}
+      
+.pageNav #menuIcon, .mobile-dropmenu {
+    display:none;
+}
+    
+.pageNav .mobile-nav h1 {
+    font-size: calc(8vw - 3vw);
+}
+    
+.pageNav .mobile-nav aside {
+    font-size: calc(4vw - 2vw);
+}
+    
+.show-mobile-element {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-align-items: center;
+}
+    
+.pageNav .mobile-nav aside a {
+    padding: 10px;
+}
+    
+.pageNav .mobile-nav aside a:not(:last-child) {
+    margin-right:10px;
+}
+    
+.pageNav div a:hover {
+    border-radius: 5px;
+    background-color: rgba(198, 198, 198, 0.19);
+}
+    
+.pageNav .mobile-nav a:last-child {
+    border-radius: 5px;
+    background-color: rgba(198, 198, 198, 0.19);
+}
+
+
+form {
+    width: 80%;
+}
+    
+footer {
+    padding: 30px 15px;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    background-color: rgb(240, 240, 240);
+}
+
+footer .show-footer {
+    display: initial;
+}
+
+footer nav a:not(:last-child){
+    padding: 0px 10px;
+}
+
+footer nav a:last-child {
+    padding-left:10px;
+}
+
+footer p {
+    display: inline-block;
+
+}
+}
+
+@media only screen and (min-width: 1024px){
+
+    form {
+        width:  60%;        
+    }
+}
