@@ -24,7 +24,7 @@ html {
 }
     
 .landing-page-background {
-    background-image: url("Portfolio/Ref/Website-Design-Background.png");
+    background-image: url("../Ref/Website-Design-Background.png");
     background-size: cover;
     border-bottom: 1px solid black;
 }
