@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-image: url("../ref/Website-Design-Background.png");
+    background-image: url("../Ref/Website-Design-Background.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -23,7 +23,7 @@ body {
 }
     
 .landing-page-background {
-    background-image: url("../ref/Website-Design-Background.png");
+    background-image: url("../Ref/Website-Design-Background.png");
     background-size: cover;
     border-bottom: 1px solid black;
 }
