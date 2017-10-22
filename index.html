@@ -9,6 +9,7 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1.0">
 
     <script type="text/javascript" src="home_script.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <link rel="stylesheet" type="text/css" href="home_page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -16,46 +17,10 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav role="navigation" class="pageNav col-12 col-m-12">
-            <ul>
-                <li><a href="#" target="_self">Home</a> <span class="fa"><a href="javascript:void(0);" onclick="dropMenu()" id="menuIcon" class="fa-align-justify"></a></span></li>
-                <div class="hide-menu" id="display-menu">
-                    <li><a href="#" target="_self">Experience</a></li>
-                    <li><a href="#" target="_self">Project</a></li>
-                    <li><a href="#" target="_self">contact</a></li>
-                </div>
-            </ul>
-        </nav>
-
-        <div class="filter col-12">
-            <main role="main" class="col-12 col-m-12">
-                <section class="col-8 col-m-8">
-                    <header>
-                        <h1>Jude Amos</h1>
-                        <h3>Junior Front End Developer</h3>
-                    </header>
-                    <p>
-                        Hello, I'm jude, and welcome to my portfolio. I enjoy building everything from small business sites to rich interactive web
-                        apps if you are seeking a front end web developer or an employer looking to hire, you can get in
-                        touch with me <span>here </span>
-                    </p>
-                </section>
-                <aside class="col-4 col-m-8">
-                    <div>
-                        <img src="images\background-images\31-.jpg" alt="devices" usemap="#devices">
-                        <map name="devices"></map>
-                    </div>
-                </aside>
-            </main>
-        </div>
-        <div class="button-container col-12"></div>
-        <button class="button1"> Learn More</button>
-        <button class="button2">Recent Projects</button>
-        <footer class="col-12">
-            <span class="fa fa-angle-down"></span>
-        </footer>
-    </div>
+    <div w3-include-html="/portfolio/portfolio.html"></div>
+    <script>
+        w3.includeHTML();
+    </script>
 </body>
 
 </html>
