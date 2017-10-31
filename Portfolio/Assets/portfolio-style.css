@@ -280,15 +280,15 @@ html {
     stroke-width: 10; 
 }
 .about-me-sect .main-skills .html-level {
-    stroke-dasharray: 160 189;
+    stroke-dasharray: 187.5 189; /*.Cost Max 250-260.*/
 }
 
 .about-me-sect .main-skills .css-level {
-    stroke-dasharray: 170 189;
+    stroke-dasharray:  187.5 189;
 }
 
 .about-me-sect .main-skills .javascript-level {
-    stroke-dasharray: 120 189;
+    stroke-dasharray: 150 189;
 }
 
 .about-me-sect .main-skills h3 {
@@ -320,7 +320,32 @@ html {
 }
 
 .about-me-sect .sub-skills .photoshop {
-    width: 90%; 
+    width: 60%; 
+    background-color: purple;
+}
+
+.about-me-sect .sub-skills .Bootstrap {
+    width: 30%; 
+    background-color: purple;
+}
+
+.about-me-sect .sub-skills .php {
+    width: 40%; 
+    background-color: purple;
+}
+
+.about-me-sect .sub-skills .SQL {
+    width: 20%; 
+    background-color: purple;
+}
+
+.about-me-sect .sub-skills .JQuery {
+    width: 10%; 
+    background-color: purple;
+}
+
+.about-me-sect .sub-skills .SASS {
+    width: 10%; 
     background-color: purple;
 }
 

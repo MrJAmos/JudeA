@@ -2,26 +2,35 @@
 
 function func() {
     'use strict';
-    let menuIcon = document.getElementById("menuIcon");
-    let aTag = document.getElementById("portfoliotext");
-    let node = document.createTextNode("Portfolio");
-    aTag.insertBefore(node,menuIcon);
-
     let mq = window.matchMedia("(min-width: 736px)");
-    
-    if (!mq.matches) {
-        aTag.removeAttribute('href');
+
+    let menuIcon = document.getElementById("menuIcon");
+    let aTag = document.getElementById("anchor-adjustor");
+
+    let page = document.getElementById("identifier");
+    if (page.className === "portfolio") {
+        document.querySelector(".anchor-text").innerHTML = "Portfolio";
+        if (!mq.matches) {
+            aTag.removeAttribute('href');
+        }
+        else {
+            aTag.setAttribute('href', 'index.html');
+        }
     }
     else {
-        let x = document.getElementsByTagName("TITLE")[0].textContent;
-        if(x === "Contact Page"){
-            aTag.setAttribute('href', '../../index.html');                    
+        let navTitle = document.querySelector(".nav-text-change");
+        if (!mq.matches) {
+            aTag.removeAttribute('href');
+            navTitle.innerHTML = "Contact";
         }
-        else if(x === "Jude Amos"){
-            aTag.setAttribute('href', 'index.html');                                
+        else {
+            navTitle.innerHTML = "Portfolio";
+            aTag.setAttribute('href', '../../index.html');
         }
     }
 }
+
+
 
 function dropMenu() {
     'use strict';
@@ -42,11 +51,9 @@ function dropMenu() {
     }
 }
 
-window.onload = function() {
+window.onload = function () {
     func();
 }
-
-
 
 
 
