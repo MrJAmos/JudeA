@@ -14,7 +14,9 @@ function func() {
             aTag.removeAttribute('href');
         }
         else {
-            aTag.setAttribute('href', 'index.html');
+            if (aTag.getAttribute("href")!== null){
+                aTag.setAttribute('href', 'index.html');
+            }
         }
     }
     else {
@@ -22,6 +24,7 @@ function func() {
         if (!mq.matches) {
             aTag.removeAttribute('href');
             navTitle.innerHTML = "Contact";
+
         }
         else {
             navTitle.innerHTML = "Portfolio";
