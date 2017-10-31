@@ -149,7 +149,19 @@ html {
     background-color: #1477CC;    
     height: 320px;
     margin-top: 20px;
-    border-top: 1px solid white;    
+
+    display: flex;
+    height: initial;
+    flex-direction: row;
+    -webkit-flex-direction: row;  
+    -webkit-justify-content: space-around;
+    justify-content: flex-start;
+    padding: 10px 0px;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-top: 0px;
+    border-bottom: 0px;
+
     -webkit-box-shadow: inset 10px 10px 300px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: inset 10px 10px 300px 0px rgba(0,0,0,0.75);
     box-shadow: inset 10px 10px 300px 0px rgba(0,0,0,0.75);
@@ -157,9 +169,11 @@ html {
 
 .latest-project-sect aside div {
     text-align: center;
-    display: flex;
-    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    background-color: transparent;
     background-color: white;
+    margin: 0px 10px;
 }
 
 .latest-project-sect aside > div {
@@ -167,8 +181,9 @@ html {
 }
 
 .latest-project-sect aside div .project-image {
-    width: 100px;
-    height: 100px;
+    width:200px;
+    width: calc(200px + 3vw);
+    height: 150px;
     background-color: #cccccc;
 }
 
@@ -176,6 +191,7 @@ html {
     margin: auto;
     color: #cccccc;
     font-size: 13px;
+    padding: 10px 0px;
 }
 
 .latest-project-sect aside .title-change {
@@ -392,46 +408,6 @@ footer aside nav a {
     margin-top: 20px;
 }
 /*--This sector above is reasonably done!---*/
-
-.latest-project-sect aside {
-    overflow: auto;
-    display: flex;
-    height: initial;
-    flex-direction: row;
-    -webkit-flex-direction: row;  
-    -webkit-justify-content: space-around;
-    justify-content: flex-start;
-    padding: 10px 0px;
-    border-right: 2px solid white;
-    border-left: 2px solid white;
-    border-top: 0px;
-    border-bottom: 0px;
-    
-}
-
-.latest-project-sect aside div {
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    background-color: transparent;
-    background-color: white;
-    margin: 0px 10px;
-}
-
-.latest-project-sect aside div:not(:first-child) {
-    margin-top: 0px;
-}
-
-.latest-project-sect aside div .project-image {
-    width:200px;
-    width: calc(200px + 3vw);
-    height: 150px;
-}
-
-.latest-project-sect aside div p {
-    background-color: white;
-    padding: 10px 0px;
-}
-
 
 .about-me-sect  {
     border-bottom: 1px solid;
