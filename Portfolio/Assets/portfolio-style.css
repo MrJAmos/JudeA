@@ -125,6 +125,7 @@ html {
     background-color: #e74a43; 
     margin: 15px 0px 15px;
     align-self: center;
+    cursor: pointer;
 }
 
 .welcome-sect .browser-img {
@@ -236,9 +237,13 @@ html {
     margin-left: 0px;
 }   
 
+.about-me-sect aside:first-child p {
+    line-height: 24px;
+}
+
 .about-me-sect aside:first-child p::first-letter {
     color: #1477CC;
-    font-size: 200%;
+    font-size: 30px;
 }
 
 .about-me-sect aside:first-child div, .about-me-sect aside:first-child p{
@@ -258,7 +263,21 @@ html {
     
 }
 
-.about-me-sect aside:first-child button{
+.about-me-sect aside:first-child p button {
+    font-size: 15px;
+    border: none;
+    background-color: white;
+}
+
+.about-me-sect aside:first-child p button::before {
+    content: "...";
+}
+
+.about-me-sect aside:first-child p span {
+    display: none;
+}
+
+.about-me-sect aside:first-child div a button{
     height: 35px;
     padding: 0px 20px;
     background-color: #1477CC;
@@ -268,6 +287,7 @@ html {
     border-radius: 10px;
     font-size:  15px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .about-me-sect aside:last-child {

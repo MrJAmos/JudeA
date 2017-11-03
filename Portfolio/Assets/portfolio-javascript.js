@@ -46,14 +46,6 @@ function func() {
     }
 }
 
-function a(mq, atag) {
-    if (!mq.matches) {
-        atag.setAttribute('hre')
-    }
-}
-
-
-
 function dropMenu() {
     'use strict';
     let x = document.getElementById('display-menu');
@@ -75,6 +67,28 @@ function dropMenu() {
 
 window.onload = function () {
     func();
+};
+
+function showMore() {
+    x = document.getElementById("checkButton");
+    hiddenTxt = document.getElementById("hiddenTxt");
+    txtChange = document.getElementById("show-more-txt");
+    icon = document.getElementById("showIcon");
+
+    if (x.className === "show-more") {
+        hiddenTxt.style.display = "initial";
+        x.style.color = "grey";
+        txtChange.innerHTML = "Show Less";
+        icon.className = "fa fa-angle-up";
+        x.className = "show-less";
+    }
+    else {
+        hiddenTxt.style.display = "none";
+        txtChange.innerHTML = "Show More";
+        icon.className = "fa fa-angle-down";        
+        x.className = "show-more";
+    }
+
 }
 
 
