@@ -3,33 +3,52 @@
 function func() {
     'use strict';
     let mq = window.matchMedia("(min-width: 736px)");
-
+    let navTitle = document.querySelector(".anchor-text");
     let menuIcon = document.getElementById("menuIcon");
     let aTag = document.getElementById("anchor-adjustor");
-
     let page = document.getElementById("identifier");
+
     if (page.className === "portfolio") {
-        document.querySelector(".anchor-text").innerHTML = "Portfolio";
-        if (!mq.matches) {
-            aTag.removeAttribute('href');
+        navTitle.innerHTML = "Portfolio";
+        if (mq.matches) {
+            aTag.setAttribute('href', 'index.html');
         }
-        else {
-            if (aTag.getAttribute("href")!== null){
+        mq.onchange = function () {
+            if (!mq.matches) {
+                aTag.removeAttribute('href');
+            }
+            else {
                 aTag.setAttribute('href', 'index.html');
             }
-        }
+        };
     }
-    else {
-        let navTitle = document.querySelector(".nav-text-change");
-        if (!mq.matches) {
-            aTag.removeAttribute('href');
-            navTitle.innerHTML = "Contact";
+    else if (page.className === "contact") {
 
+        if (!mq.matches) {
+            navTitle.innerHTML = "Contact";
         }
         else {
             navTitle.innerHTML = "Portfolio";
             aTag.setAttribute('href', '../../index.html');
         }
+
+        mq.onchange = function () {
+            if (!mq.matches) {
+                navTitle.innerHTML = "Contact";
+                aTag.removeAttribute('href');
+            }
+            else {
+                navTitle.innerHTML = "Portfolio";
+                aTag.setAttribute('href', '../../index.html');
+            }
+        };
+
+    }
+}
+
+function a(mq, atag) {
+    if (!mq.matches) {
+        atag.setAttribute('hre')
     }
 }
 
