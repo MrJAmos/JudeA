@@ -168,7 +168,7 @@ html {
     box-shadow: inset 10px 10px 300px 0px rgba(0,0,0,0.75);
 }
 
-.latest-project-sect aside div {
+.latest-project-sect aside .project {
     text-align: center;
     flex-direction: column;
     -webkit-flex-direction: column;
@@ -177,18 +177,41 @@ html {
     margin: 0px 10px;
 }
 
-.latest-project-sect aside > div {
+.latest-project-sect aside > .project {
     margin-top: 10px;
 }
 
-.latest-project-sect aside div .project-image {
+.latest-project-sect aside .project .image-container {
+    position: relative; 
+}
+.latest-project-sect aside .project .project-image {
     width:200px;
     width: calc(200px + 3vw);
     height: 150px;
     background-color: #cccccc;
+    border: 1px solid #cccccc;
 }
 
-.latest-project-sect aside div p {
+.latest-project-sect aside .project .image-container:hover > .project-image {
+    border: 1px solid #e74a43;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(231,74,67,1);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(231,74,67,1);
+    box-shadow: 0px 0px 14px 0px rgba(231,74,67,1);;
+}
+.latest-project-sect aside .project div .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+    transform: translate(-50%, -50%);    
+    color: #cccccc
+} 
+
+.latest-project-sect aside .project .image-container:hover > .center {
+   font-weight: bolder;
+}
+
+
+.latest-project-sect aside .project p {
     margin: auto;
     color: #cccccc;
     font-size: 13px;
