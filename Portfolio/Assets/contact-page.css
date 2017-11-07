@@ -110,7 +110,7 @@ form {
     margin: 20px auto;
 }
 
-input[type=text], select, textarea {
+input[type=text], input[type=email], select, textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;

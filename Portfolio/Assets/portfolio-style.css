@@ -30,7 +30,7 @@ html {
 }
 
 .line-break {
-    background: rgba(0, 0, 0, 0.2);/* Green background with 30% opacity */    
+    background: rgba(0, 0, 0, 0.2);/* Green background with 30% opacity */
 }
 
 .pageNav {
@@ -76,7 +76,7 @@ html {
 .pageNav .mobile-nav aside a i {
     padding: 5px;
     color: white;
-    margin-left: 10px;    
+    margin-left: 10px;   
     font-style: normal;
 }
 
@@ -522,7 +522,8 @@ footer aside nav a {
 
 .about-me-sect  aside:last-child{
     flex-direction: column-reverse; 
-    align-self: center;
+    margin-bottom: auto;
+    padding-top: 60px;    
 }
 
 .about-me-sect .sub-skills .skill-container {
@@ -579,7 +580,6 @@ footer p {
     }
 
     .about-me-sect aside:last-child {
-        padding-top: 40px;
     }
 
     .about-me-sect .sub-skills .skill-container {

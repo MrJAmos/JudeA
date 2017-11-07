@@ -9,11 +9,13 @@
     <script type="text/javascript" src="../Assets/portfolio-javascript.js"></script>
     <link rel="stylesheet" type="text/css" href="../Assets/contact-page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    
 </header>
 
 <body>
+<?php include('../Assets/contact-form-process.php'); ?>
 
+    
     <div class="wrapper">
 
         <div class="line-break">
@@ -33,6 +35,7 @@
 
                         <div class="hide-mobile-element show-mobile-element">
                             <a href="../../index.html#about-me">About Me</a>
+                            <a href="../../index.html#latest-project">Projects</a>
                             <a href="contact-page.html">Contact</a>
                         </div>
                     </aside>
@@ -41,6 +44,7 @@
                 <div class="hide-element mobile-dropmenu" id="display-menu">
                     <a href="../../index.html">Portfolio</a>
                     <a href="../../index.html#about-me">About Me</a>
+                    <a href="../../index.html#latest-project">Projects</a>
                     <a href="contact-page.html">Contact</a>
                 </div>
 
@@ -49,31 +53,25 @@
 
         <main role="main">
             <div class="container">
-                <form action="/action_page.php">
-                    <label for="fname">First Name</label>
+                <form action="../Assets/contact-form.php" method="post">
+                    <label for="fname">First Name *</label>
                     <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
                     <label for="lname">Last Name</label>
                     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-                    <label for="country">Country</label>
-                    <select id="country" name="country">
-                        <option value="Afghanistan" title="Afghanistan">Afghanistan</option>
-                        <option value="Åland Islands" title="Åland Islands">Åland Islands</option>
-                        <option value="Albania" title="Albania">Albania</option>
-
-                    </select>
-                    </select>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="abc@hotmail.com">
 
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Subject..">
+                    <input type="text" id="subject" name="subject" placeholder="Just saying hi..">
 
-                    <label for="subject">Description</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    <label for="message">Description</label>
+                    <textarea id="message" name="message" placeholder="..." style="height:200px"></textarea>
                     <div>
                         <input type="submit" value="Submit">
 
-                        <a href="#">
+                        <a href="Portfolio/Ref/Jude-Amos-CV.docx" download="Jude Amos CV">
                             <button> Resume |
                                 <span class="fa fa-download"></span>
                             </button>
