@@ -69,6 +69,7 @@ function replace() {
     else {
         counter();
     }
+    
 draw();
     paragraph2.innerHTML = "Guess Left: " + count;
     paragraph.innerHTML = unknown;

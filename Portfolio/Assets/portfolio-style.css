@@ -17,10 +17,13 @@ html {
 }
 
 .wrapper {
-    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
     
 .landing-page-background {
@@ -35,21 +38,31 @@ html {
 
 .pageNav {
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-flex-wrap: nowrap;
-    -webkit-flex-direction: column;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     color: white;
 }
 
 .pageNav .mobile-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-align-items: center;
     padding: 15px;
     border-bottom: 2px solid #e5e5e5;        
@@ -62,6 +75,8 @@ html {
 }
 
 .pageNav .mobile-nav aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;    
     margin-left: auto;
@@ -93,9 +108,14 @@ html {
 /*----*/
 
 .welcome-sect {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex; 
-    flex-direction: column;
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column;
     -webkit-flex-direction: column;    
     padding: 20px 15px 0px 15px;
     color:white;
@@ -115,16 +135,16 @@ html {
     color: #1477CC;
 }
 
-.welcome-sect button {
+.welcome-sect .hire-btn {
     font-size: calc(4vw - 1vw);
-    padding: 7px 15px;        
-    border: none;
+    padding: 2px 15px;        
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: bolder;
     color:white;
     background-color: #e74a43; 
     margin: 15px 0px 15px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     cursor: pointer;
 }
 
@@ -151,26 +171,34 @@ html {
     height: 320px;
     margin-top: 20px;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
     height: initial;
-    flex-direction: row;
-    -webkit-flex-direction: row;  
-    -webkit-justify-content: space-around;
-    justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding: 10px 0px;
     border-right: 2px solid white;
     border-left: 2px solid white;
     border-top: 0px;
     border-bottom: 0px;
-
-    -webkit-box-shadow: inset 10px 10px 300px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 10px 10px 300px 0px rgba(0,0,0,0.75);
     box-shadow: inset 10px 10px 300px 0px rgba(0,0,0,0.75);
 }
 
 .latest-project-sect aside .project {
     text-align: center;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-flex-direction: column;
     background-color: transparent;
     background-color: white;
@@ -194,15 +222,14 @@ html {
 
 .latest-project-sect aside .project .image-container:hover > .project-image {
     border: 1px solid #e74a43;
-    -webkit-box-shadow: 0px 0px 14px 0px rgba(231,74,67,1);
-    -moz-box-shadow: 0px 0px 14px 0px rgba(231,74,67,1);
     box-shadow: 0px 0px 14px 0px rgba(231,74,67,1);;
 }
 .latest-project-sect aside .project div .center {
     position: absolute;
     top: 50%;
     left: 50%;  
-    transform: translate(-50%, -50%);    
+    -webkit-transform: translate(-50%, -50%);  
+            transform: translate(-50%, -50%);    
     color: #cccccc
 } 
 
@@ -227,9 +254,14 @@ html {
 
 .about-me-sect {
     overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 20px 15px; 
 }
 
@@ -247,7 +279,8 @@ html {
 
 .e {
     border-radius: 60%;
-    shape-outside: circle(50%) border-box;    
+    -webkit-shape-outside: circle(50%) border-box;
+            shape-outside: circle(50%) border-box;    
     float: right;    
     padding: 0px 1px 0px 0px;  
 }
@@ -264,7 +297,7 @@ html {
     line-height: 24px;
 }
 
-.about-me-sect aside:first-child p::first-letter {
+.about-me-sect aside:first-child p:first-letter {
     color: #1477CC;
     font-size: 30px;
 }
@@ -274,9 +307,13 @@ html {
 }
 
 .about-me-sect aside:first-child div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .about-me-sect aside:first-child div img {
@@ -292,7 +329,7 @@ html {
     background-color: white;
 }
 
-.about-me-sect aside:first-child p button::before {
+.about-me-sect aside:first-child p button:before {
     content: "...";
 }
 
@@ -300,30 +337,44 @@ html {
     display: none;
 }
 
-.about-me-sect aside:first-child div a button{
+.about-me-sect aside:first-child div .resume-btn{
     height: 35px;
-    padding: 0px 20px;
+    padding: 5px 20px;
     background-color: #1477CC;
     margin-right: 20px;
     color: white;        
-    border:none;
     border-radius: 10px;
     font-size:  15px;
     font-weight: bold;
     cursor: pointer;
 }
 
+.about-me-sect aside:first-child div{
+    display: flex;
+    align-items: center;
+} 
+
 .about-me-sect aside:last-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
-    flex-direction: column;
-    flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 
 .about-me-sect .main-skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 .about-me-sect .main-skills svg{
@@ -363,10 +414,14 @@ html {
 }
 
 .about-me-sect .sub-skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
     display: -webkit-flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .about-me-sect .sub-skills .skill-container{
@@ -417,9 +472,12 @@ html {
 }
 
 footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     display: -webkit-flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-justify-content: space-around;
     background-color: rgb(240, 240, 240);
     padding: 50px 0px;
@@ -460,9 +518,12 @@ footer aside nav a {
 }
 
 .show-mobile-element {
-    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-align-items: center;
 }
 
@@ -488,7 +549,7 @@ footer aside nav a {
     margin-top: 45px;
 }
 
-.welcome-sect button {
+.welcome-sect .hire-btn {
     font-size: calc(4vw - 2vw);
 }
 
@@ -499,7 +560,10 @@ footer aside nav a {
 
 .about-me-sect  {
     border-bottom: 1px solid;
-    flex-direction: row; 
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; 
     -webkit-flex-direction: row;  
 }
 
@@ -509,7 +573,8 @@ footer aside nav a {
 
 .about-me-sect .skill-title-visibility2 {
     display: initial;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
 }
 
 .about-me-sect h1, .latest-project-sect h1 {
@@ -517,11 +582,16 @@ footer aside nav a {
 }
 
 .about-me-sect  aside:first-child{
-    flex:0.7;
+    -webkit-box-flex:0.7;
+        -ms-flex:0.7;
+            flex:0.7;
 }
 
 .about-me-sect  aside:last-child{
-    flex-direction: column-reverse; 
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; 
     margin-bottom: auto;
     padding-top: 60px;    
 }
@@ -533,7 +603,9 @@ footer aside nav a {
 
 footer {
     padding: 30px 15px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-justify-content: space-between;
     background-color: rgb(240, 240, 240);
 }

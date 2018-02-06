@@ -11,31 +11,75 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+
+  <style>
+    .container{
+      display: flex;
+      flex-direction: column;
+      padding: 30px 100px 0px ;
+    }
+    form {
+      margin-top: 5%;
+    }
+    .description {
+      width: 500px;
+    }
+    #result {
+      border-left: 1px solid;
+      padding-left: 15px;
+      width: 85%;
+      height: 150px;
+      display: flex;
+      overflow: auto;
+    }
+  </style>
 </head>
 
+
 <body>
+  <div class ="container">
+    <h1>FizzBuzz </h1>
+    <h4>Description:</h4>
+    <p class ="description">Fizz buzz is a group word game for children to teach them about division. 
+      Players take turns to count incrementally, replacing any number divisible 
+      by three with the word "fizz", and any number divisible by five with the word "buzz". 
+      </p>
   <form>
-    Max Count: <input type="number" , id="count"> 
-    Word for Div 3: <input type="text" , id="div3"> 
-    word for div 5: <input type="text" , id="div5"> 
+    Max Count: <input type="number" , id="count", placeholder="30"> 
+    Word for Div 3: <input type="text" , id="div3", placeholder="Hello .."> 
+    Word for Div 5: <input type="text" , id="div5", placeholder="Mike"> 
     <input type="button", onclick="fizzBuzz()", value="Play"> 
+    <input type="button", onclick="refresh()", value="Refresh"> 
   </form>
 
-  <h3>FizzBuzz </h3>
-  <p id='f1'> </p>
+  <h4>Results: </h4>
+<div id = "result">
+  <div id='f1'> </div>
+
+  </div>
+
+
+  </div>
 
   <script>
     function fizzBuzz(){
-      var count = document.getElementById('count').value;
-      var div3 = document.getElementById('div3').value;
-      var div5 = document.getElementById('div5').value;
+      let count = document.getElementById('count').value;
+      let div3 = document.getElementById('div3').value;
+      let div5 = document.getElementById('div5').value;
 
       fizz(count,div3,div5);
     }
 
+    function refresh(){
+    location.reload();
+    }
+
     function fizz(c,d3,d5) {
-      var f1 = document.getElementById('f1');
-      for (var j = 1; j <= c ; j++) {
+      let j = 1;
+      let f1 = document.getElementById('f1');
+
+      for (j; j <= c ; j++) {
+
         if (j % 3 === 0 && j % 5 === 0) {
           f1.innerHTML += d3.concat(d5) + " <br>";
         }
